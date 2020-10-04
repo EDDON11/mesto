@@ -1,0 +1,11 @@
+@import url(../vendor/normalize.css);
+@import url(../fonts/Inter/inter.css);
+@import url(../block/page/page.css);
+@import url(../block/content/content.css);
+@import url(../block/header/header.css);
+@import url(../block/profile/profile.css);
+@import url(../block/elements/elements.css);
+@import url(../block/element/element.css);
+@import url(../block/footer/footer.css);
+@import url(../block/popup/popup.css);
+@import url(../block/popup/__open/popup__open.css);

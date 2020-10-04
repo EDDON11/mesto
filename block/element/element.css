@@ -1,0 +1,27 @@
+@import url(./__title/element__title.css);
+@import url(./__rectangle/element__rectangle.css);
+@import url(./__pic/element__pic.css);
+@import url(./__like/element__like.css);
+
+
+.element {
+   width: 282px;
+   height: 361px;
+   background: #FFFFFF;
+   border-radius: 10px;
+   
+}
+
+
+@media screen and (max-width: 882px) {
+
+   .element {
+   
+      margin: 0 auto;
+   }
+   
+   
+   }
+
+
+
