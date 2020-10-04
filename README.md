@@ -6,6 +6,6 @@
 * Медиазапросы
 * JavaScript
 
-* [Ссылка на сайт](https://eddon11.github.io/russian-travel/index.html)
+* [Ссылка на сайт](https://eddon11.github.io/mesto/index.html)
 
 
