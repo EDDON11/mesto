@@ -1,5 +1,4 @@
 .popup__content {
-
     max-width: 430px;
     position: relative;
     top: 0;
@@ -15,8 +14,7 @@
 @media screen and (max-width: 556px) {
 
 .popup__content {
-
-
+    
 max-width: 282px;
 
 }

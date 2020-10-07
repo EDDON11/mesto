@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Mesto</title>
-        <link rel="stylesheet" href="./pages/index.css" />
+        <link rel="stylesheet" href="./pages/index.css"/>
     </head>
 
     <body class="page">
@@ -18,7 +18,7 @@
 
                 <div class="profile__info">
                     <div class="profile__info-name">
-                        <h2 class="profile__title">Жак-Ив Кусто</h2>
+                        <h1 class="profile__title">Жак-Ив Кусто</h1>
                         <button type="button" class="profile__edit-button"></button>
                     </div>
                     <p class="profile__subtitle">Исследователь океана</p>
@@ -28,53 +28,53 @@
             </section>
 
             <section class="elements">
-                <div class="element">
+                <article class="element">
                     <img class="element__pic" src="./image/baikal.jpg" alt="Байкал" />
                     <div class="element__rectangle">
-                        <p class="element__title">Байкал</p>
+                        <h2 class="element__title">Байкал</h2>
                         <button type="button" class="element__like"></button>
                     </div>
-                </div>
-                <div class="element">
+                </article>
+                <article class="element">
                     <img class="element__pic" src="./image/elbrus.jpg" alt="Эльбрус" />
                     <div class="element__rectangle">
-                        <p class="element__title">Эльбрус</p>
+                        <h2 class="element__title">Эльбрус</h2>
                         <button type="button" class="element__like"></button>
                     </div>
-                </div>
-                <div class="element">
+                </article>
+                <article class="element">
                     <img class="element__pic" src="./image/kamchatka.jpg" alt="Камчатка" />
                     <div class="element__rectangle">
-                        <p class="element__title">Камчатка</p>
+                        <h2 class="element__title">Камчатка</h2>
                         <button type="button" class="element__like"></button>
                     </div>
-                </div>
-                <div class="element">
+                </article>
+                <article  class="element">
                     <img class="element__pic" src="./image/vladivostok.jpg" alt="Владивосток" />
                     <div class="element__rectangle">
-                        <p class="element__title">Владивосток</p>
+                        <h2 class="element__title">Владивосток</h2>
                         <button type="button" class="element__like"></button>
                     </div>
-                </div>
-                <div class="element">
+                </article>
+                <article class="element">
                     <img class="element__pic" src="./image/sochi.jpg" alt="Сочи" />
                     <div class="element__rectangle">
-                        <p class="element__title">Сочи</p>
+                        <h2 class="element__title">Сочи</h2>
                         <button type="button" class="element__like"></button>
                     </div>
-                </div>
-                <div class="element">
+                </article>
+                <article class="element">
                     <img class="element__pic" src="./image/tula.jpg" alt="Тула" />
                     <div class="element__rectangle">
-                        <p class="element__title">Тула</p>
+                        <h2 class="element__title">Тула</h2>
                         <button type="button" class="element__like"></button>
                     </div>
-                </div>
+                </article>
             </section>
         </main>
 
         <footer class="footer">
-            <p class="footer__copyright">2020 Mesto Russia</p>
+            <p class="footer__copyright">©&nbsp;2020 Mesto Russia</p>
         </footer>
 
         <div class="popup">
@@ -84,9 +84,9 @@
                 <div class="popup__body">
                 <h3 class="popup__title">Редактировать профиль</h3>
 
-                <form class="popup__form" >
-                    <input type="text" class="popup__input popup__input-heading" value=""/>
-                    <input type="text" class="popup__input popup__input-subheading" value=""/>
+                <form class="popup__form" method="post" name="form" >
+                    <input  class="popup__input popup__input_type_heading" type="text" value="" name="name"/>
+                    <input  class="popup__input popup__input_type_subheading" type="text" value="" name="job"/>
                     <button class="popup__save-button" type="submit">Сохранить</button>    
                 </form>
                 

@@ -2,15 +2,14 @@
 @import url(../popup/__close/popup__close.css);
 @import url(../popup/__title/popup__title.css);
 @import url(../popup/__save-button/popup__save-button.css);
-@import url(../popup/__input-heading/popup__input-heading.css);
-@import url(../popup/__input-subheading/popup__input-subheading.css);
 @import url(../popup/__form/popup__form.css);
 @import url(../popup/__content/popup__content.css);
 @import url(../popup/__input/popup__input.css);
+@import url(../../block/popup/__input/_type/popup__input_type_heading.css);
+@import url(../../block/popup/__input/_type/popup__input_type_subheading.css);
+
+
 .popup {
-
-
-
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
@@ -20,8 +19,6 @@
     display: none;
 
 
-
-    
 
 }
 

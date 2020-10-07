@@ -1,13 +1,22 @@
 @import url(./__logo/header__logo.css);
-@import url(./__line/header__line.css);
 
 .header {
 max-width: 882px;
 padding-top: 45px;
 margin: auto;
-border-bottom:  1px solid #545454;
+border-bottom:  1px solid rgba(84, 84, 84, 0.7);
 margin-bottom: 40px;
 
+
+}
+
+
+@media screen and (max-width: 516px) {
+
+.header {
+padding: 28px 0 0;
+
+}
 
 }
 

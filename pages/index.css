@@ -8,4 +8,4 @@
 @import url(../block/element/element.css);
 @import url(../block/footer/footer.css);
 @import url(../block/popup/popup.css);
-@import url(../block/popup/__open/popup__open.css);
+@import url(../block/popup/_open/popup_open.css);
