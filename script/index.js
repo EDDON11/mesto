@@ -37,8 +37,8 @@ let popupPhotoFull = document.querySelector('.popup-photo__full');
 let popupPhotoTitle = document.querySelector('.popup-photo__title');
 const popupPhoto = document.querySelector('.popup-photo');
 const popupPhotoClose = document.querySelector('.popup-photo__close');
-const imageInputTitle = document.querySelector('.popup__input_type_title');
-const ImageInputUrl = document.querySelector('.popup__input_type_url');
+const popupPhotoInputTitle = document.querySelector('.popup__input_type_title');
+const popupPhotoInputUrl = document.querySelector('.popup__input_type_url');
 const elements = document.querySelector('.elements');
 const elementsTemplate = document.querySelector('#elements_template').content;
 
@@ -99,11 +99,11 @@ function editProfileSubmit(evt) {
 function addCardSubmit(evt) {
     evt.preventDefault();
     renderCard({
-        name: imageInputTitle.value,
-        link: ImageInputUrl.value
+        name: popupPhotoInputTitle.value,
+        link: popupPhotoInputUrl.value
     });
-    imageInputTitle.value = '';
-    ImageInputUrl.value = '';
+    popupPhotoInputTitle.value = '';
+    popupPhotoInputUrl.value = '';
     closePopup(popupAdd);
 };
 buttonAddPopup.addEventListener('click', () => openPopup(popupAdd));
