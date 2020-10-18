@@ -7,6 +7,8 @@
 @import url(../popup/__input/popup__input.css);
 @import url(../../block/popup/__input/_type/popup__input_type_heading.css);
 @import url(../../block/popup/__input/_type/popup__input_type_subheading.css);
+@import url(../../block/popup/__input/_type/popup__input_type_title.css);
+@import url(../../block/popup/__input/_type/popup__input_type_url.css);
 
 
 .popup {
@@ -17,7 +19,8 @@
     width: 100%;
     height: 100%;
     display: none;
-
+    opacity: 0;
+    
 
 
 }

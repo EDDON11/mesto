@@ -8,3 +8,9 @@ object-fit: cover;
 }
 
 
+.element__pic:hover {
+cursor: pointer;
+
+}
+
+

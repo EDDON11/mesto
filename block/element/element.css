@@ -2,12 +2,15 @@
 @import url(./__rectangle/element__rectangle.css);
 @import url(./__pic/element__pic.css);
 @import url(./__like/element__like.css);
+@import url(../element/__delete-button/element__delete-button.css);
+
 
 
 .element {
    max-width: 282px;
    background: #FFFFFF;
    border-radius: 10px;
+   position: relative;
    
 }
 
