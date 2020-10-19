@@ -22,23 +22,23 @@ const buttonClosePopup = document.querySelector('.popup__close');
 const buttonSavePopup = document.querySelector('.popup__save-button');
 const popup = document.querySelector('.popup');
 const buttonAddPopup = document.querySelector('.profile__add-button');
-let formElement = document.querySelector('.popup__form');
-let popupFormEdit = document.querySelector('.popup__form_edit');
-let popupFormAdd = document.querySelector('.popup__form_add');
-let porfileName = document.querySelector('.profile__title');
-let profileJob = document.querySelector('.profile__subtitle');
-let nameInput = document.querySelector('.popup__input_type_heading');
-let jobInput = document.querySelector('.popup__input_type_subheading');
+const formElement = document.querySelector('.popup__form');
+const popupFormEdit = document.querySelector('.popup__form_edit');
+const popupFormAdd = document.querySelector('.popup__form_add');
+const porfileName = document.querySelector('.profile__title');
+const profileJob = document.querySelector('.profile__subtitle');
+const nameInput = document.querySelector('.popup__input_type_heading');
+const jobInput = document.querySelector('.popup__input_type_subheading');
 const popupEdit = document.querySelector('.popup_edit');
 const popupAdd = document.querySelector('.popup_add');
 const popupCloseEdit = document.querySelector('.popup__close_edit');
 const popupCloseAdd = document.querySelector('.popup__close_add');
-let popupPhotoFull = document.querySelector('.popup-photo__full');
-let popupPhotoTitle = document.querySelector('.popup-photo__title');
+const popupPhotoFull = document.querySelector('.popup-photo__full');
+const popupPhotoTitle = document.querySelector('.popup-photo__title');
 const popupPhoto = document.querySelector('.popup-photo');
 const popupPhotoClose = document.querySelector('.popup-photo__close');
-const popupPhotoInputTitle = document.querySelector('.popup__input_type_title');
-const popupPhotoInputUrl = document.querySelector('.popup__input_type_url');
+const inputTitle = document.querySelector('.popup__input_type_title');
+const inputUrl = document.querySelector('.popup__input_type_url');
 const elements = document.querySelector('.elements');
 const elementsTemplate = document.querySelector('#elements_template').content;
 
@@ -99,11 +99,11 @@ function editProfileSubmit(evt) {
 function addCardSubmit(evt) {
     evt.preventDefault();
     renderCard({
-        name: popupPhotoInputTitle.value,
-        link: popupPhotoInputUrl.value
+        name: inputTitle.value,
+        link: inputUrl.value
     });
-    popupPhotoInputTitle.value = '';
-    popupPhotoInputUrl.value = '';
+    inputTitle.value = '';
+    inputUrl.value = '';
     closePopup(popupAdd);
 };
 buttonAddPopup.addEventListener('click', () => openPopup(popupAdd));
