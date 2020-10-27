@@ -13,9 +13,20 @@
     color: #000000;
 }
 
+
+.popup__input:focus {
+    outline: none;
+
+
+}
+
+
+
 @media screen and (max-width: 556px) {
     .popup__input {
         width: 238px;
         margin: 0px 22px 43px;
     }
 }
+
+

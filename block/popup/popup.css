@@ -9,6 +9,11 @@
 @import url(../../block/popup/__input/_type/popup__input_type_subheading.css);
 @import url(../../block/popup/__input/_type/popup__input_type_title.css);
 @import url(../../block/popup/__input/_type/popup__input_type_url.css);
+@import url(../popup/__save-button/_disable/popup__save-button_disable.css);
+@import url(../popup/__input/_type/popup__input_type_error.css);
+
+
+
 
 
 .popup {

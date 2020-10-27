@@ -20,9 +20,9 @@ const initialCards = [{
 const buttonOpenPopup = document.querySelector('.profile__edit-button');
 const buttonClosePopup = document.querySelector('.popup__close');
 const buttonSavePopup = document.querySelector('.popup__save-button');
+const popupOverlay = document.querySelector('.popup__content');
 const popup = document.querySelector('.popup');
 const buttonAddPopup = document.querySelector('.profile__add-button');
-const formElement = document.querySelector('.popup__form');
 const popupFormEdit = document.querySelector('.popup__form_edit');
 const popupFormAdd = document.querySelector('.popup__form_add');
 const porfileName = document.querySelector('.profile__title');
@@ -89,6 +89,14 @@ function closePopupPhoto(popupPhoto) {
     popupPhoto.classList.remove('popup-photo_open');
 }
 
+function closePopupEsc(evt) {
+    if (evt.key === 'Escape') {
+        closePopup(popupEdit);
+        closePopupPhoto(popupPhoto);
+        closePopup(popupAdd);
+    }
+}
+
 function editProfileSubmit(evt) {
     evt.preventDefault();
     porfileName.textContent = nameInput.value;
@@ -117,3 +125,8 @@ popupFormAdd.addEventListener('submit', addCardSubmit);
 popupCloseEdit.addEventListener('click', () => closePopup(popupEdit));
 popupCloseAdd.addEventListener('click', () => closePopup(popupAdd));
 popupPhotoClose.addEventListener('click', () => closePopupPhoto(popupPhoto));
+document.addEventListener('keydown', closePopupEsc);
+document.addEventListener('click', function(evt) {
+    closePopup(evt.target);
+    closePopupPhoto(evt.target);
+});
