@@ -11,6 +11,12 @@
 @import url(../../block/popup/__input/_type/popup__input_type_url.css);
 @import url(../popup/__save-button/_disable/popup__save-button_disable.css);
 @import url(../popup/__input/_type/popup__input_type_error.css);
+@import url(../popup/_photo/popup_photo.css);
+@import url(../popup/__title/_photo/popup__title_photo.css);
+@import url(../popup/__full/popup__full.css);
+@import url(../popup/__content/_photo/popup__content_photo.css);
+@import url(../popup/__close/_photo/popup__close_photo.css);
+
 
 
 

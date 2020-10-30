@@ -29,10 +29,10 @@ const popupEdit = document.querySelector('.popup_edit');
 const popupAdd = document.querySelector('.popup_add');
 const popupCloseEdit = document.querySelector('.popup__close_edit');
 const popupCloseAdd = document.querySelector('.popup__close_add');
-const popupPhotoFull = document.querySelector('.popup-photo__full');
-const popupPhotoTitle = document.querySelector('.popup-photo__title');
-const popupPhoto = document.querySelector('.popup-photo');
-const popupPhotoClose = document.querySelector('.popup-photo__close');
+const popupPhotoFull = document.querySelector('.popup__full');
+const popupPhotoTitle = document.querySelector('.popup__title_photo');
+const popupPhoto = document.querySelector('.popup_photo');
+const popupPhotoClose = document.querySelector('.popup__close_photo');
 const inputTitle = document.querySelector('.popup__input_type_title');
 const inputUrl = document.querySelector('.popup__input_type_url');
 const elements = document.querySelector('.elements');
@@ -72,11 +72,10 @@ initialCards.forEach(function(card) {
 });
 
 
-
 function openPopup(popup) {
 	popup.classList.add('popup_open');
 	document.addEventListener('keyup', closePopupEsc);
-
+	
 }
 
 function closePopup(popup) {
