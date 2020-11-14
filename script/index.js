@@ -62,14 +62,14 @@ newFormEdit.enableValidation();
 const newFormAdd = new FormValidator(obj, popupFormAdd);
 newFormAdd.enableValidation();
 
-initialCards.forEach((item) => {
-    const card = new Card(item, elementsTeamplate);
+initialCards.forEach((data) => {
+    const card = new Card(data, elementsTeamplate);
     const elementCard = card.renderCard();
     elements.append(elementCard);
 });
 
-const createCard = ((item) => {
-    const card = new Card(item, elementsTeamplate);
+const createCard = ((data) => {
+    const card = new Card(data, elementsTeamplate);
     const elementCard = card.renderCard();
     elements.prepend(elementCard);
 });
