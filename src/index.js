@@ -53,10 +53,7 @@ cardList.renderItems()
 
 function createCard(data) {
     const card = new Card(data, elementsTeamplate, (name, link) => {
-        popupWithImage.openPopup({
-            nameAdd: name,
-            linkAdd: link
-        })
+        popupWithImage.openPopup(name, link)
     });
     const elementCard = card.renderCard();
     elements.prepend(elementCard);
