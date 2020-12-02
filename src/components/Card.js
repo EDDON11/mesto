@@ -24,7 +24,9 @@ export default class Card {
     renderCard() {
         this._element = this._getTamplate();
         this._element.querySelector('.element__title').textContent = this._name;
-        this._element.querySelector('.element__pic').src = this._link;
+        const imageElement = this._element.querySelector('.element__pic');
+        imageElement.src = this._link;
+        imageElement.alt = this._name; 
         this._setEventListener();
         return this._element;
     }
