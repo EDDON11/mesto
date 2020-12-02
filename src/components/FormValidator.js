@@ -54,14 +54,12 @@ export class FormValidator {
       });
   };
   enableValidation() {
-      const forms = Array.from(document.querySelectorAll(this._formSelector));
-      forms.forEach((formElement) => {
-          formElement.addEventListener('submit', (evt) => {
-              evt.preventDefault();
-          });
-          this._setEventListeners(formElement);
-      });
-  };
+    this._setEventListeners(this._formElement);
+    this._formElement.addEventListener('submit', (evt) => {
+        evt.preventDefault();
+    });
+};
+  
 }
 
 

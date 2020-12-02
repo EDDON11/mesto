@@ -1,10 +1,10 @@
 import {
     FormValidator
 }
-from './components/FormValidator.js';
-import Card from './components/Card.js';
-import UserInfo from './components/UserInfo.js';
-import Section from './components/Section.js';
+from '../components/FormValidator.js';
+import Card from '../components/Card.js';
+import UserInfo from '../components/UserInfo.js';
+import Section from '../components/Section.js';
 import {
     initialCards,
     profileNameSelector,
@@ -21,10 +21,10 @@ import {
     elements,
     elementsTeamplate
 }
-from './utils/const.js'
-import PopupWithImage from './components/PopupWithImage.js';
-import PopupWithForm from './components/PopupWithForm.js';
-import './pages/index.css';
+from '../utils/const.js'
+import PopupWithImage from '../components/PopupWithImage.js';
+import PopupWithForm from '../components/PopupWithForm.js';
+import '../pages/index.css';
 const obj = ({
     formSelector: '.popup__form',
     inputSelector: '.popup__input',
@@ -33,10 +33,7 @@ const obj = ({
     inputErrorClass: 'popup__input_type_error',
     errorClass: 'popup__error_active'
 });
-const profile = new UserInfo({
-    profileJobSelector,
-    profileNameSelector
-});
+const profile = new UserInfo(profileNameSelector, profileJobSelector);
 const newFormEdit = new FormValidator(obj, popupFormEdit);
 newFormEdit.enableValidation();
 const newFormAdd = new FormValidator(obj, popupFormAdd);
@@ -56,7 +53,7 @@ function createCard(data) {
         popupWithImage.openPopup(name, link)
     });
     const elementCard = card.renderCard();
-    elements.prepend(elementCard);
+    return elementCard;
 }
 const popupWithImage = new PopupWithImage(popupPhoto);
 popupWithImage.setEventListeners();
@@ -67,7 +64,7 @@ function handleCardClick(name, link) {
 const popupAddForm = new PopupWithForm({
     popupSelector: popupSelectorAdd,
     handleFormSubmit: (formData) => {
-        createCard(formData);
+        cardList.addItemPrepend(createCard(formData));
     },
 });
 const popupEditForm = new PopupWithForm({

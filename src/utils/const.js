@@ -19,17 +19,17 @@ export const initialCards = [{
 }];
 
 
-export const profileNameSelector = document.querySelector('.profile__title');
-export const profileJobSelector = document.querySelector('.profile__subtitle');
+export const profileNameSelector = '.profile__title';
+export const profileJobSelector = '.profile__subtitle';
 export const buttonEditPopup = document.querySelector('.profile__edit-button');
 export const buttonAddPopup = document.querySelector('.profile__add-button');
 export const popupFormEdit = document.querySelector('.popup__form_edit');
 export const popupFormAdd = document.querySelector('.popup__form_add');
 export const nameInput = document.querySelector('.popup__input_type_heading');
 export const jobInput = document.querySelector('.popup__input_type_subheading');
-export const popupSelectorEdit = document.querySelector('.popup_edit');
-export const popupSelectorAdd = document.querySelector('.popup_add');
-export const popupPhoto = document.querySelector('.popup_photo');
+export const popupSelectorEdit = '.popup_edit';
+export const popupSelectorAdd = '.popup_add';
+export const popupPhoto = '.popup_photo';
 export const elements = document.querySelector('.elements');
 export const elementsTeamplate = '#elements_template';
 
