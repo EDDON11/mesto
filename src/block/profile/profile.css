@@ -5,6 +5,8 @@
 @import url(./__avatar/profile__avatar.css);
 @import url(./__add-button/profile__add-button.css);
 @import url(./__info-name/profile__info-name.css);
+@import url(./__avatar-button/profile__avatar-button.css);
+@import url(./__avatar-container/profile__avatar-container.css);
 
 
 .profile {
