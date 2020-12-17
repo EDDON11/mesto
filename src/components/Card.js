@@ -49,6 +49,14 @@ export default class Card {
             this._likeCard()
         }
     }
+
+    _withImage() {
+        this._element.querySelector('.element__title').textContent = this._name;
+        const imageElement = this._element.querySelector('.element__pic');
+        imageElement.src = this._link;
+        imageElement.alt = this._name;
+
+    }
     deleteCard() {
         this._element.remove();
         this._element = null;
@@ -60,10 +68,7 @@ export default class Card {
     }
     renderCard() {
         this._element = this._getTamplate();
-        this._element.querySelector('.element__title').textContent = this._name;
-        const imageElement = this._element.querySelector('.element__pic');
-        imageElement.src = this._link;
-        imageElement.alt = this._name;
+        this._withImage();
         this._checkCard();
         this._checkLike()
         this._setEventListener();
