@@ -23,7 +23,8 @@ import {
     popupPhoto,
     elements,
     popupDelete,
-    elementsTeamplate
+    elementsTeamplate,
+    validationConfig
 }
 from '../utils/const.js'
 import PopupWithImage from '../components/PopupWithImage.js';
@@ -31,14 +32,10 @@ import PopupWithForm from '../components/PopupWithForm.js';
 import Api from '../components/Api.js'
 import '../pages/index.css';
 import PopupWithSubmit from '../components/PopupWithSubmit.js';
-const validationConfig = ({
-    formSelector: '.popup__form',
-    inputSelector: '.popup__input',
-    submitButtonSelector: '.popup__save-button',
-    inactiveButtonClass: 'popup__save-button_disable',
-    inputErrorClass: 'popup__input_type_error',
-    errorClass: 'popup__error_active'
-});
+import {
+    renderLoading
+}
+from '../utils/utils.js'
 let userId
 const api = new Api({
     url: "https://mesto.nomoreparties.co/v1/cohort-18/",
@@ -98,43 +95,50 @@ const popupWithImage = new PopupWithImage(popupPhoto);
 popupWithImage.setEventListeners();
 const popupCardDelete = new PopupWithSubmit(popupDelete);
 popupCardDelete.setEventListeners();
+
 const popupAddForm = new PopupWithForm({
     popupSelector: popupSelectorAdd,
     handleFormSubmit: (formData) => {
-        popupAddForm.renderLoadingAdd(true)
+        renderLoading(true)
         api.getCreateCard({
             name: formData.name,
             link: formData.link
         }).then((data) => {
             cardList.addItem(createCard(data))
-            popupAddForm.closePopup()
         }).catch((err) => {
             console.log('Ошибка:', err);
-        }).finally(() => popupAddForm.renderLoadingAdd(false));
+        }).finally(() => {
+            renderLoading(false)
+            popupAddForm.closePopup()
+        });
     }
 });
 const popupEditForm = new PopupWithForm({
     popupSelector: popupSelectorEdit,
     handleFormSubmit: (formData) => {
-        popupEditForm.renderLoading(true)
+        renderLoading(true);
         api.setUserInfo(formData).then((userData) => {
             profile.setUserInfo(userData)
-            popupEditForm.closePopup()
         }).catch((err) => {
             console.log('Ошибка:', err);
-        }).finally(() => popupEditForm.renderLoading(false));
+        }).finally(() => {
+            renderLoading(false)
+            popupEditForm.closePopup()
+        });
     }
 });
 const popupAvatarForm = new PopupWithForm({
     popupSelector: popupSelectorAvatar,
     handleFormSubmit: (formData) => {
-        popupAvatarForm.renderLoading(true)
+        renderLoading(true)
         api.updateAvatar(formData).then((avatar) => {
             profile.setUserInfo(avatar)
-            popupAvatarForm.closePopup()
         }).catch((err) => {
             console.log('Ошибка:', err);
-        }).finally(() => popupAvatarForm.renderLoading(false));
+        }).finally(() => {
+            renderLoading(false)
+            popupAvatarForm.closePopup()
+        });
     }
 });
 profileAvatarButton.addEventListener('click', () => {
